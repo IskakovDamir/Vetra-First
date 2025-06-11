@@ -1,0 +1,21 @@
+# Основные зависимости для Vetra AI бота
+python-telegram-bot==20.7
+google-api-python-client==2.108.0
+google-auth-httplib2==0.1.1
+google-auth-oauthlib==1.1.0
+google-auth==2.23.4
+
+# 🤖 NEW: OpenAI GPT integration
+openai>=1.0.0
+
+# Парсинг дат и времени
+dateparser==1.1.8
+pytz==2023.3
+
+# Дополнительные утилиты
+python-dotenv==1.0.0
+
+# Для разработки и отладки (опционально)
+# pytest==7.4.3
+# black==23.11.0
+# flake8==6.1.0

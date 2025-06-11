@@ -1,0 +1,449 @@
+2025-06-09 17:30:11,417 - __main__ - INFO - 🔥 Initializing Vetra AI with FIXED OAuth2...
+2025-06-09 17:30:11,598 - gpt_parser - INFO - 🤖 Initializing GPT-powered event parser...
+2025-06-09 17:30:11,598 - gpt_parser - INFO - 📱 Using fine-tuned model: ft:gpt-3.5-turbo-1106:personal:vetra-v1:Bg4yxDhd
+2025-06-09 17:30:11,617 - gpt_parser - INFO - ✅ GPT parser initialized successfully
+2025-06-09 17:30:11,617 - __main__ - INFO - 🎯 SUCCESS! GPT fine-tuned parser initialized!
+2025-06-09 17:30:11,617 - __main__ - INFO - 🔥 Starting Vetra AI with FIXED OAuth2 system...
+2025-06-09 17:30:11,617 - __main__ - INFO - 🤖 Active Parser: GPT Fine-tuned
+2025-06-09 17:30:11,617 - __main__ - INFO - 🌍 Timezone support: ENABLED
+2025-06-09 17:30:11,617 - __main__ - INFO - 🔧 OAuth2: FIXED
+2025-06-09 17:30:11,625 - __main__ - INFO - ✅ VETRA AI BOT READY WITH FIXED OAUTH2!
+2025-06-09 17:30:11,625 - __main__ - INFO - 🔧 All authorization issues have been resolved
+2025-06-09 17:30:11,625 - __main__ - INFO - 🚀 Ready for optimal performance
+2025-06-09 17:30:12,036 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7966992541:AAEEnwqPtw9u7Fz-Z3pgE0WaMm89cW_ZsPM/getMe "HTTP/1.1 200 OK"
+2025-06-09 17:30:12,137 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7966992541:AAEEnwqPtw9u7Fz-Z3pgE0WaMm89cW_ZsPM/deleteWebhook "HTTP/1.1 200 OK"
+2025-06-09 17:30:12,137 - telegram.ext.Application - INFO - Application started
+2025-06-09 17:30:22,446 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7966992541:AAEEnwqPtw9u7Fz-Z3pgE0WaMm89cW_ZsPM/getUpdates "HTTP/1.1 200 OK"
+2025-06-09 17:30:24,374 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7966992541:AAEEnwqPtw9u7Fz-Z3pgE0WaMm89cW_ZsPM/getUpdates "HTTP/1.1 200 OK"
+2025-06-09 17:30:24,374 - fixed_auth - INFO - 🔍 Checking authorization for user 785966064
+2025-06-09 17:30:24,375 - fixed_auth - INFO - 📁 Token path: users/user_785966064_token.json
+2025-06-09 17:30:24,376 - fixed_auth - INFO - 🔄 Refreshing expired token for user 785966064
+2025-06-09 17:30:24,733 - fixed_auth - ERROR - ❌ Token refresh failed for user 785966064: ('invalid_grant: Token has been expired or revoked.', {'error': 'invalid_grant', 'error_description': 'Token has been expired or revoked.'})
+2025-06-09 17:30:24,735 - __main__ - INFO - 🔐 Starting authorization for user 785966064
+2025-06-09 17:30:24,735 - fixed_auth - INFO - 🔐 Creating authorization URL for user 785966064
+2025-06-09 17:30:24,749 - fixed_auth - INFO - 🔄 Starting OAuth callback server...
+2025-06-09 17:30:25,250 - fixed_auth - INFO - ✅ OAuth callback server started on localhost:8080
+2025-06-09 17:30:25,250 - fixed_auth - INFO - 📁 Using redirect URI: http://localhost:8080/oauth2callback
+2025-06-09 17:30:25,252 - fixed_auth - INFO - ✅ Auth URL created for user 785966064
+2025-06-09 17:30:25,252 - fixed_auth - INFO - 🔗 State: OHT6sEH4NORQNAB8kqTqllf7AHcuon
+2025-06-09 17:30:25,252 - fixed_auth - INFO - 🌐 Auth URL: https://accounts.google.com/o/oauth2/auth?response_type=code&client_id=832185435204-mrsdif0lnortdd4gb0se6pctcpmkkav8.apps.googleusercontent.com&redirect_uri=http%3A%2F%2Flocalhost%3A8080%2Foauth2callback&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcalendar&state=OHT6sEH4NORQNAB8kqTqllf7AHcuon&access_type=offline&include_granted_scopes=true&prompt=consent
+2025-06-09 17:30:25,565 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7966992541:AAEEnwqPtw9u7Fz-Z3pgE0WaMm89cW_ZsPM/sendMessage "HTTP/1.1 400 Bad Request"
+2025-06-09 17:30:25,567 - telegram.ext.Application - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/Users/damir/Downloads/vetra_ai_bot/venv/lib/python3.13/site-packages/telegram/ext/_application.py", line 1298, in process_update
+    await coroutine
+  File "/Users/damir/Downloads/vetra_ai_bot/venv/lib/python3.13/site-packages/telegram/ext/_handlers/basehandler.py", line 158, in handle_update
+    return await self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/damir/Downloads/vetra_ai_bot/main.py", line 394, in auth_command
+    await send_authorization_request(update, context)
+  File "/Users/damir/Downloads/vetra_ai_bot/main.py", line 263, in send_authorization_request
+    await update.message.reply_text(auth_text, parse_mode='Markdown', reply_markup=reply_markup)
+  File "/Users/damir/Downloads/vetra_ai_bot/venv/lib/python3.13/site-packages/telegram/_message.py", line 1829, in reply_text
+    return await self.get_bot().send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<20 lines>...
+    )
+    ^
+  File "/Users/damir/Downloads/vetra_ai_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 2988, in send_message
+    return await super().send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<21 lines>...
+    )
+    ^
+  File "/Users/damir/Downloads/vetra_ai_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 1099, in send_message
+    return await self._send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<19 lines>...
+    )
+    ^
+  File "/Users/damir/Downloads/vetra_ai_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 629, in _send_message
+    result = await super()._send_message(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<21 lines>...
+    )
+    ^
+  File "/Users/damir/Downloads/vetra_ai_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 809, in _send_message
+    result = await self._post(
+             ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/damir/Downloads/vetra_ai_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 697, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/damir/Downloads/vetra_ai_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 369, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/damir/Downloads/vetra_ai_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 726, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/damir/Downloads/vetra_ai_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 197, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/damir/Downloads/vetra_ai_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 353, in _request_wrapper
+    raise BadRequest(message)
+telegram.error.BadRequest: Can't parse entities: can't find end of the entity starting at byte offset 698
+2025-06-09 17:30:31,142 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7966992541:AAEEnwqPtw9u7Fz-Z3pgE0WaMm89cW_ZsPM/getUpdates "HTTP/1.1 200 OK"
+2025-06-09 17:30:31,144 - fixed_auth - INFO - 🔍 Checking authorization for user 785966064
+2025-06-09 17:30:31,144 - fixed_auth - INFO - 📁 Token path: users/user_785966064_token.json
+2025-06-09 17:30:31,145 - fixed_auth - INFO - 🔄 Refreshing expired token for user 785966064
+2025-06-09 17:30:31,487 - fixed_auth - ERROR - ❌ Token refresh failed for user 785966064: ('invalid_grant: Token has been expired or revoked.', {'error': 'invalid_grant', 'error_description': 'Token has been expired or revoked.'})
+2025-06-09 17:30:31,488 - __main__ - INFO - 🔐 Starting authorization for user 785966064
+2025-06-09 17:30:31,488 - fixed_auth - INFO - 🔐 Creating authorization URL for user 785966064
+2025-06-09 17:30:31,489 - fixed_auth - INFO - 📁 Using redirect URI: http://localhost:8080/oauth2callback
+2025-06-09 17:30:31,490 - fixed_auth - INFO - ✅ Auth URL created for user 785966064
+2025-06-09 17:30:31,490 - fixed_auth - INFO - 🔗 State: ib6sOGksC33ek3WYOCrjCstgq3Mcm0
+2025-06-09 17:30:31,490 - fixed_auth - INFO - 🌐 Auth URL: https://accounts.google.com/o/oauth2/auth?response_type=code&client_id=832185435204-mrsdif0lnortdd4gb0se6pctcpmkkav8.apps.googleusercontent.com&redirect_uri=http%3A%2F%2Flocalhost%3A8080%2Foauth2callback&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcalendar&state=ib6sOGksC33ek3WYOCrjCstgq3Mcm0&access_type=offline&include_granted_scopes=true&prompt=consent
+2025-06-09 17:30:31,802 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7966992541:AAEEnwqPtw9u7Fz-Z3pgE0WaMm89cW_ZsPM/sendMessage "HTTP/1.1 400 Bad Request"
+2025-06-09 17:30:31,802 - telegram.ext.Application - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/Users/damir/Downloads/vetra_ai_bot/venv/lib/python3.13/site-packages/telegram/ext/_application.py", line 1298, in process_update
+    await coroutine
+  File "/Users/damir/Downloads/vetra_ai_bot/venv/lib/python3.13/site-packages/telegram/ext/_handlers/basehandler.py", line 158, in handle_update
+    return await self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/damir/Downloads/vetra_ai_bot/main.py", line 394, in auth_command
+    await send_authorization_request(update, context)
+  File "/Users/damir/Downloads/vetra_ai_bot/main.py", line 263, in send_authorization_request
+    await update.message.reply_text(auth_text, parse_mode='Markdown', reply_markup=reply_markup)
+  File "/Users/damir/Downloads/vetra_ai_bot/venv/lib/python3.13/site-packages/telegram/_message.py", line 1829, in reply_text
+    return await self.get_bot().send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<20 lines>...
+    )
+    ^
+  File "/Users/damir/Downloads/vetra_ai_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 2988, in send_message
+    return await super().send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<21 lines>...
+    )
+    ^
+  File "/Users/damir/Downloads/vetra_ai_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 1099, in send_message
+    return await self._send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<19 lines>...
+    )
+    ^
+  File "/Users/damir/Downloads/vetra_ai_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 629, in _send_message
+    result = await super()._send_message(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<21 lines>...
+    )
+    ^
+  File "/Users/damir/Downloads/vetra_ai_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 809, in _send_message
+    result = await self._post(
+             ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/damir/Downloads/vetra_ai_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 697, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/damir/Downloads/vetra_ai_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 369, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/damir/Downloads/vetra_ai_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 726, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/damir/Downloads/vetra_ai_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 197, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/damir/Downloads/vetra_ai_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 353, in _request_wrapper
+    raise BadRequest(message)
+telegram.error.BadRequest: Can't parse entities: can't find end of the entity starting at byte offset 698
+2025-06-09 17:30:40,855 - fixed_auth - INFO - 📥 Received callback request: /oauth2callback?state=wzBq4qGWUFIIq0PiJwcnNJaeXywyJL&code=4/0AUJR-x5e5-J6gfkmhQaCnAcnh2BXNt5Dx8tOgQDod15hAQULw0vR0_2VsKod3C8GUykSaw&scope=https://www.googleapis.com/auth/calendar.events%20https://www.googleapis.com/auth/calendar
+2025-06-09 17:30:40,855 - fixed_auth - INFO - 📊 Parsed URL: ParseResult(scheme='', netloc='', path='/oauth2callback', params='', query='state=wzBq4qGWUFIIq0PiJwcnNJaeXywyJL&code=4/0AUJR-x5e5-J6gfkmhQaCnAcnh2BXNt5Dx8tOgQDod15hAQULw0vR0_2VsKod3C8GUykSaw&scope=https://www.googleapis.com/auth/calendar.events%20https://www.googleapis.com/auth/calendar', fragment='')
+2025-06-09 17:30:40,856 - fixed_auth - INFO - 📊 Query params: {'state': ['wzBq4qGWUFIIq0PiJwcnNJaeXywyJL'], 'code': ['4/0AUJR-x5e5-J6gfkmhQaCnAcnh2BXNt5Dx8tOgQDod15hAQULw0vR0_2VsKod3C8GUykSaw'], 'scope': ['https://www.googleapis.com/auth/calendar.events https://www.googleapis.com/auth/calendar']}
+2025-06-09 17:30:40,856 - fixed_auth - INFO - 📝 Extracted - State: wzBq4qGWUFIIq0PiJwcnNJaeXywyJL, Code: Present, Error: None
+2025-06-09 17:30:40,856 - fixed_auth - INFO - 🔄 Processing OAuth callback
+2025-06-09 17:30:40,856 - fixed_auth - INFO - 📝 State: wzBq4qGWUFIIq0PiJwcnNJaeXywyJL
+2025-06-09 17:30:40,856 - fixed_auth - INFO - 📝 Code: 4/0AUJR-x5e5-J6gfkmh...
+2025-06-09 17:30:40,856 - fixed_auth - INFO - ❌ Error: None
+2025-06-09 17:30:40,856 - fixed_auth - ERROR - ❌ Unknown session state: wzBq4qGWUFIIq0PiJwcnNJaeXywyJL
+2025-06-09 17:30:40,856 - fixed_auth - INFO - 🔍 Active sessions: ['OHT6sEH4NORQNAB8kqTqllf7AHcuon', 'ib6sOGksC33ek3WYOCrjCstgq3Mcm0']
+2025-06-09 17:30:40,856 - fixed_auth - ERROR - ❌ Callback processing failed
+2025-06-09 17:30:40,856 - fixed_auth - INFO - 🌐 HTTP: "GET /oauth2callback?state=wzBq4qGWUFIIq0PiJwcnNJaeXywyJL&code=4/0AUJR-x5e5-J6gfkmhQaCnAcnh2BXNt5Dx8tOgQDod15hAQULw0vR0_2VsKod3C8GUykSaw&scope=https://www.googleapis.com/auth/calendar.events%20https://www.googleapis.com/auth/calendar HTTP/1.1" 400 -
+2025-06-09 17:30:40,856 - fixed_auth - ERROR - ❌ Error response sent: Authorization completion error
+2025-06-09 17:30:41,593 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7966992541:AAEEnwqPtw9u7Fz-Z3pgE0WaMm89cW_ZsPM/getUpdates "HTTP/1.1 200 OK"
+2025-06-09 17:30:51,700 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7966992541:AAEEnwqPtw9u7Fz-Z3pgE0WaMm89cW_ZsPM/getUpdates "HTTP/1.1 200 OK"
+2025-06-09 17:30:55,422 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7966992541:AAEEnwqPtw9u7Fz-Z3pgE0WaMm89cW_ZsPM/getUpdates "HTTP/1.1 200 OK"
+2025-06-09 17:30:55,424 - fixed_auth - INFO - 🔍 Checking authorization for user 785966064
+2025-06-09 17:30:55,424 - fixed_auth - INFO - 📁 Token path: users/user_785966064_token.json
+2025-06-09 17:30:55,424 - fixed_auth - INFO - 🔄 Refreshing expired token for user 785966064
+2025-06-09 17:30:55,766 - fixed_auth - ERROR - ❌ Token refresh failed for user 785966064: ('invalid_grant: Token has been expired or revoked.', {'error': 'invalid_grant', 'error_description': 'Token has been expired or revoked.'})
+2025-06-09 17:30:55,767 - __main__ - INFO - 👤 User 785966064 (Damir) started bot. Authorized: False
+2025-06-09 17:30:55,767 - __main__ - INFO - 🔐 Starting authorization for user 785966064
+2025-06-09 17:30:55,767 - fixed_auth - INFO - 🔐 Creating authorization URL for user 785966064
+2025-06-09 17:30:55,768 - fixed_auth - INFO - 📁 Using redirect URI: http://localhost:8080/oauth2callback
+2025-06-09 17:30:55,768 - fixed_auth - INFO - ✅ Auth URL created for user 785966064
+2025-06-09 17:30:55,768 - fixed_auth - INFO - 🔗 State: Kv2WkGJd4wGHPRQjDDVv4XE9QkFcva
+2025-06-09 17:30:55,769 - fixed_auth - INFO - 🌐 Auth URL: https://accounts.google.com/o/oauth2/auth?response_type=code&client_id=832185435204-mrsdif0lnortdd4gb0se6pctcpmkkav8.apps.googleusercontent.com&redirect_uri=http%3A%2F%2Flocalhost%3A8080%2Foauth2callback&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcalendar&state=Kv2WkGJd4wGHPRQjDDVv4XE9QkFcva&access_type=offline&include_granted_scopes=true&prompt=consent
+2025-06-09 17:30:56,095 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7966992541:AAEEnwqPtw9u7Fz-Z3pgE0WaMm89cW_ZsPM/sendMessage "HTTP/1.1 400 Bad Request"
+2025-06-09 17:30:56,096 - telegram.ext.Application - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/Users/damir/Downloads/vetra_ai_bot/venv/lib/python3.13/site-packages/telegram/ext/_application.py", line 1298, in process_update
+    await coroutine
+  File "/Users/damir/Downloads/vetra_ai_bot/venv/lib/python3.13/site-packages/telegram/ext/_handlers/basehandler.py", line 158, in handle_update
+    return await self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/damir/Downloads/vetra_ai_bot/main.py", line 130, in start
+    await send_authorization_request(update, context)
+  File "/Users/damir/Downloads/vetra_ai_bot/main.py", line 263, in send_authorization_request
+    await update.message.reply_text(auth_text, parse_mode='Markdown', reply_markup=reply_markup)
+  File "/Users/damir/Downloads/vetra_ai_bot/venv/lib/python3.13/site-packages/telegram/_message.py", line 1829, in reply_text
+    return await self.get_bot().send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<20 lines>...
+    )
+    ^
+  File "/Users/damir/Downloads/vetra_ai_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 2988, in send_message
+    return await super().send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<21 lines>...
+    )
+    ^
+  File "/Users/damir/Downloads/vetra_ai_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 1099, in send_message
+    return await self._send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<19 lines>...
+    )
+    ^
+  File "/Users/damir/Downloads/vetra_ai_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 629, in _send_message
+    result = await super()._send_message(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<21 lines>...
+    )
+    ^
+  File "/Users/damir/Downloads/vetra_ai_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 809, in _send_message
+    result = await self._post(
+             ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/damir/Downloads/vetra_ai_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 697, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/damir/Downloads/vetra_ai_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 369, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/damir/Downloads/vetra_ai_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 726, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/damir/Downloads/vetra_ai_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 197, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/damir/Downloads/vetra_ai_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 353, in _request_wrapper
+    raise BadRequest(message)
+telegram.error.BadRequest: Can't parse entities: can't find end of the entity starting at byte offset 698
+2025-06-09 17:31:05,877 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7966992541:AAEEnwqPtw9u7Fz-Z3pgE0WaMm89cW_ZsPM/getUpdates "HTTP/1.1 200 OK"
+2025-06-09 17:31:07,412 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7966992541:AAEEnwqPtw9u7Fz-Z3pgE0WaMm89cW_ZsPM/getUpdates "HTTP/1.1 200 OK"
+2025-06-09 17:31:07,415 - fixed_auth - INFO - 🔍 Checking authorization for user 785966064
+2025-06-09 17:31:07,416 - fixed_auth - INFO - 📁 Token path: users/user_785966064_token.json
+2025-06-09 17:31:07,417 - fixed_auth - INFO - 🔄 Refreshing expired token for user 785966064
+2025-06-09 17:31:07,748 - fixed_auth - ERROR - ❌ Token refresh failed for user 785966064: ('invalid_grant: Token has been expired or revoked.', {'error': 'invalid_grant', 'error_description': 'Token has been expired or revoked.'})
+2025-06-09 17:31:08,140 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7966992541:AAEEnwqPtw9u7Fz-Z3pgE0WaMm89cW_ZsPM/sendMessage "HTTP/1.1 200 OK"
+2025-06-09 17:31:09,916 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7966992541:AAEEnwqPtw9u7Fz-Z3pgE0WaMm89cW_ZsPM/getUpdates "HTTP/1.1 200 OK"
+2025-06-09 17:31:09,918 - fixed_auth - INFO - 🔍 Checking authorization for user 785966064
+2025-06-09 17:31:09,918 - fixed_auth - INFO - 📁 Token path: users/user_785966064_token.json
+2025-06-09 17:31:09,919 - fixed_auth - INFO - 🔄 Refreshing expired token for user 785966064
+2025-06-09 17:31:10,257 - fixed_auth - ERROR - ❌ Token refresh failed for user 785966064: ('invalid_grant: Token has been expired or revoked.', {'error': 'invalid_grant', 'error_description': 'Token has been expired or revoked.'})
+2025-06-09 17:31:10,258 - __main__ - INFO - 🔐 Starting authorization for user 785966064
+2025-06-09 17:31:10,258 - fixed_auth - INFO - 🔐 Creating authorization URL for user 785966064
+2025-06-09 17:31:10,258 - fixed_auth - INFO - 📁 Using redirect URI: http://localhost:8080/oauth2callback
+2025-06-09 17:31:10,261 - fixed_auth - INFO - ✅ Auth URL created for user 785966064
+2025-06-09 17:31:10,261 - fixed_auth - INFO - 🔗 State: E53Pfr7A5pGK0075Dm3YQK7KzUkJNk
+2025-06-09 17:31:10,261 - fixed_auth - INFO - 🌐 Auth URL: https://accounts.google.com/o/oauth2/auth?response_type=code&client_id=832185435204-mrsdif0lnortdd4gb0se6pctcpmkkav8.apps.googleusercontent.com&redirect_uri=http%3A%2F%2Flocalhost%3A8080%2Foauth2callback&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcalendar&state=E53Pfr7A5pGK0075Dm3YQK7KzUkJNk&access_type=offline&include_granted_scopes=true&prompt=consent
+2025-06-09 17:31:10,364 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7966992541:AAEEnwqPtw9u7Fz-Z3pgE0WaMm89cW_ZsPM/sendMessage "HTTP/1.1 400 Bad Request"
+2025-06-09 17:31:10,366 - telegram.ext.Application - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/Users/damir/Downloads/vetra_ai_bot/venv/lib/python3.13/site-packages/telegram/ext/_application.py", line 1298, in process_update
+    await coroutine
+  File "/Users/damir/Downloads/vetra_ai_bot/venv/lib/python3.13/site-packages/telegram/ext/_handlers/basehandler.py", line 158, in handle_update
+    return await self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/damir/Downloads/vetra_ai_bot/main.py", line 394, in auth_command
+    await send_authorization_request(update, context)
+  File "/Users/damir/Downloads/vetra_ai_bot/main.py", line 263, in send_authorization_request
+    await update.message.reply_text(auth_text, parse_mode='Markdown', reply_markup=reply_markup)
+  File "/Users/damir/Downloads/vetra_ai_bot/venv/lib/python3.13/site-packages/telegram/_message.py", line 1829, in reply_text
+    return await self.get_bot().send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<20 lines>...
+    )
+    ^
+  File "/Users/damir/Downloads/vetra_ai_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 2988, in send_message
+    return await super().send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<21 lines>...
+    )
+    ^
+  File "/Users/damir/Downloads/vetra_ai_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 1099, in send_message
+    return await self._send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<19 lines>...
+    )
+    ^
+  File "/Users/damir/Downloads/vetra_ai_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 629, in _send_message
+    result = await super()._send_message(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<21 lines>...
+    )
+    ^
+  File "/Users/damir/Downloads/vetra_ai_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 809, in _send_message
+    result = await self._post(
+             ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/damir/Downloads/vetra_ai_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 697, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/damir/Downloads/vetra_ai_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 369, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/damir/Downloads/vetra_ai_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 726, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/damir/Downloads/vetra_ai_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 197, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/damir/Downloads/vetra_ai_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 353, in _request_wrapper
+    raise BadRequest(message)
+telegram.error.BadRequest: Can't parse entities: can't find end of the entity starting at byte offset 698
+2025-06-09 17:31:20,366 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7966992541:AAEEnwqPtw9u7Fz-Z3pgE0WaMm89cW_ZsPM/getUpdates "HTTP/1.1 200 OK"
+2025-06-09 17:31:30,475 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7966992541:AAEEnwqPtw9u7Fz-Z3pgE0WaMm89cW_ZsPM/getUpdates "HTTP/1.1 200 OK"
+2025-06-09 17:31:40,585 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7966992541:AAEEnwqPtw9u7Fz-Z3pgE0WaMm89cW_ZsPM/getUpdates "HTTP/1.1 200 OK"
+2025-06-09 17:31:50,689 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7966992541:AAEEnwqPtw9u7Fz-Z3pgE0WaMm89cW_ZsPM/getUpdates "HTTP/1.1 200 OK"
+2025-06-09 17:32:00,792 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7966992541:AAEEnwqPtw9u7Fz-Z3pgE0WaMm89cW_ZsPM/getUpdates "HTTP/1.1 200 OK"
+2025-06-09 17:32:10,895 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7966992541:AAEEnwqPtw9u7Fz-Z3pgE0WaMm89cW_ZsPM/getUpdates "HTTP/1.1 200 OK"
+2025-06-09 17:32:21,002 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7966992541:AAEEnwqPtw9u7Fz-Z3pgE0WaMm89cW_ZsPM/getUpdates "HTTP/1.1 200 OK"
+2025-06-09 17:32:31,105 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7966992541:AAEEnwqPtw9u7Fz-Z3pgE0WaMm89cW_ZsPM/getUpdates "HTTP/1.1 200 OK"
+2025-06-09 17:32:41,211 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7966992541:AAEEnwqPtw9u7Fz-Z3pgE0WaMm89cW_ZsPM/getUpdates "HTTP/1.1 200 OK"
+2025-06-09 17:32:51,320 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7966992541:AAEEnwqPtw9u7Fz-Z3pgE0WaMm89cW_ZsPM/getUpdates "HTTP/1.1 200 OK"
+2025-06-09 17:33:01,424 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7966992541:AAEEnwqPtw9u7Fz-Z3pgE0WaMm89cW_ZsPM/getUpdates "HTTP/1.1 200 OK"
+2025-06-09 17:33:11,529 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7966992541:AAEEnwqPtw9u7Fz-Z3pgE0WaMm89cW_ZsPM/getUpdates "HTTP/1.1 200 OK"
+2025-06-09 17:33:21,632 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7966992541:AAEEnwqPtw9u7Fz-Z3pgE0WaMm89cW_ZsPM/getUpdates "HTTP/1.1 200 OK"
+2025-06-09 17:33:31,735 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7966992541:AAEEnwqPtw9u7Fz-Z3pgE0WaMm89cW_ZsPM/getUpdates "HTTP/1.1 200 OK"
+2025-06-09 17:33:41,837 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7966992541:AAEEnwqPtw9u7Fz-Z3pgE0WaMm89cW_ZsPM/getUpdates "HTTP/1.1 200 OK"
+2025-06-09 17:33:51,943 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7966992541:AAEEnwqPtw9u7Fz-Z3pgE0WaMm89cW_ZsPM/getUpdates "HTTP/1.1 200 OK"
+2025-06-09 17:34:02,049 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7966992541:AAEEnwqPtw9u7Fz-Z3pgE0WaMm89cW_ZsPM/getUpdates "HTTP/1.1 200 OK"
+2025-06-09 17:34:12,152 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7966992541:AAEEnwqPtw9u7Fz-Z3pgE0WaMm89cW_ZsPM/getUpdates "HTTP/1.1 200 OK"
+2025-06-09 17:34:22,263 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7966992541:AAEEnwqPtw9u7Fz-Z3pgE0WaMm89cW_ZsPM/getUpdates "HTTP/1.1 200 OK"
+2025-06-09 17:34:32,366 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7966992541:AAEEnwqPtw9u7Fz-Z3pgE0WaMm89cW_ZsPM/getUpdates "HTTP/1.1 200 OK"
+2025-06-09 17:34:42,472 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7966992541:AAEEnwqPtw9u7Fz-Z3pgE0WaMm89cW_ZsPM/getUpdates "HTTP/1.1 200 OK"
+2025-06-09 17:34:52,578 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7966992541:AAEEnwqPtw9u7Fz-Z3pgE0WaMm89cW_ZsPM/getUpdates "HTTP/1.1 200 OK"
+2025-06-09 17:35:02,682 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7966992541:AAEEnwqPtw9u7Fz-Z3pgE0WaMm89cW_ZsPM/getUpdates "HTTP/1.1 200 OK"
+2025-06-09 17:35:12,784 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7966992541:AAEEnwqPtw9u7Fz-Z3pgE0WaMm89cW_ZsPM/getUpdates "HTTP/1.1 200 OK"
+2025-06-09 17:35:22,890 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7966992541:AAEEnwqPtw9u7Fz-Z3pgE0WaMm89cW_ZsPM/getUpdates "HTTP/1.1 200 OK"
+2025-06-09 17:35:33,005 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7966992541:AAEEnwqPtw9u7Fz-Z3pgE0WaMm89cW_ZsPM/getUpdates "HTTP/1.1 200 OK"
+2025-06-09 17:35:43,110 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7966992541:AAEEnwqPtw9u7Fz-Z3pgE0WaMm89cW_ZsPM/getUpdates "HTTP/1.1 200 OK"
+2025-06-09 17:35:53,216 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7966992541:AAEEnwqPtw9u7Fz-Z3pgE0WaMm89cW_ZsPM/getUpdates "HTTP/1.1 200 OK"
+2025-06-09 17:36:03,320 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7966992541:AAEEnwqPtw9u7Fz-Z3pgE0WaMm89cW_ZsPM/getUpdates "HTTP/1.1 200 OK"
+2025-06-09 17:36:13,422 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7966992541:AAEEnwqPtw9u7Fz-Z3pgE0WaMm89cW_ZsPM/getUpdates "HTTP/1.1 200 OK"
+2025-06-09 17:36:23,527 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7966992541:AAEEnwqPtw9u7Fz-Z3pgE0WaMm89cW_ZsPM/getUpdates "HTTP/1.1 200 OK"
+2025-06-09 17:36:33,630 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7966992541:AAEEnwqPtw9u7Fz-Z3pgE0WaMm89cW_ZsPM/getUpdates "HTTP/1.1 200 OK"
+2025-06-09 17:36:43,733 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7966992541:AAEEnwqPtw9u7Fz-Z3pgE0WaMm89cW_ZsPM/getUpdates "HTTP/1.1 200 OK"
+2025-06-09 17:36:53,838 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7966992541:AAEEnwqPtw9u7Fz-Z3pgE0WaMm89cW_ZsPM/getUpdates "HTTP/1.1 200 OK"
+2025-06-09 17:37:03,950 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7966992541:AAEEnwqPtw9u7Fz-Z3pgE0WaMm89cW_ZsPM/getUpdates "HTTP/1.1 200 OK"
+2025-06-09 17:37:14,055 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7966992541:AAEEnwqPtw9u7Fz-Z3pgE0WaMm89cW_ZsPM/getUpdates "HTTP/1.1 200 OK"
+2025-06-09 17:37:24,160 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7966992541:AAEEnwqPtw9u7Fz-Z3pgE0WaMm89cW_ZsPM/getUpdates "HTTP/1.1 200 OK"
+2025-06-09 17:37:34,266 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7966992541:AAEEnwqPtw9u7Fz-Z3pgE0WaMm89cW_ZsPM/getUpdates "HTTP/1.1 200 OK"
+2025-06-09 17:37:44,369 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7966992541:AAEEnwqPtw9u7Fz-Z3pgE0WaMm89cW_ZsPM/getUpdates "HTTP/1.1 200 OK"
+2025-06-09 17:37:54,474 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7966992541:AAEEnwqPtw9u7Fz-Z3pgE0WaMm89cW_ZsPM/getUpdates "HTTP/1.1 200 OK"
+2025-06-09 17:38:04,579 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7966992541:AAEEnwqPtw9u7Fz-Z3pgE0WaMm89cW_ZsPM/getUpdates "HTTP/1.1 200 OK"
+2025-06-09 17:38:14,682 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7966992541:AAEEnwqPtw9u7Fz-Z3pgE0WaMm89cW_ZsPM/getUpdates "HTTP/1.1 200 OK"
+2025-06-09 17:38:24,788 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7966992541:AAEEnwqPtw9u7Fz-Z3pgE0WaMm89cW_ZsPM/getUpdates "HTTP/1.1 200 OK"
+2025-06-09 17:38:34,894 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7966992541:AAEEnwqPtw9u7Fz-Z3pgE0WaMm89cW_ZsPM/getUpdates "HTTP/1.1 200 OK"
+2025-06-09 17:38:44,999 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7966992541:AAEEnwqPtw9u7Fz-Z3pgE0WaMm89cW_ZsPM/getUpdates "HTTP/1.1 200 OK"
+2025-06-09 17:38:55,103 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7966992541:AAEEnwqPtw9u7Fz-Z3pgE0WaMm89cW_ZsPM/getUpdates "HTTP/1.1 200 OK"
+2025-06-09 17:39:05,205 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7966992541:AAEEnwqPtw9u7Fz-Z3pgE0WaMm89cW_ZsPM/getUpdates "HTTP/1.1 200 OK"
+2025-06-09 17:39:15,308 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7966992541:AAEEnwqPtw9u7Fz-Z3pgE0WaMm89cW_ZsPM/getUpdates "HTTP/1.1 200 OK"
+2025-06-09 17:39:25,412 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7966992541:AAEEnwqPtw9u7Fz-Z3pgE0WaMm89cW_ZsPM/getUpdates "HTTP/1.1 200 OK"
+2025-06-09 17:39:35,515 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7966992541:AAEEnwqPtw9u7Fz-Z3pgE0WaMm89cW_ZsPM/getUpdates "HTTP/1.1 200 OK"
+2025-06-09 17:39:45,624 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7966992541:AAEEnwqPtw9u7Fz-Z3pgE0WaMm89cW_ZsPM/getUpdates "HTTP/1.1 200 OK"
+2025-06-09 17:39:55,727 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7966992541:AAEEnwqPtw9u7Fz-Z3pgE0WaMm89cW_ZsPM/getUpdates "HTTP/1.1 200 OK"
+2025-06-09 17:40:05,831 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7966992541:AAEEnwqPtw9u7Fz-Z3pgE0WaMm89cW_ZsPM/getUpdates "HTTP/1.1 200 OK"
+2025-06-09 17:40:15,941 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7966992541:AAEEnwqPtw9u7Fz-Z3pgE0WaMm89cW_ZsPM/getUpdates "HTTP/1.1 200 OK"
+2025-06-09 17:40:26,046 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7966992541:AAEEnwqPtw9u7Fz-Z3pgE0WaMm89cW_ZsPM/getUpdates "HTTP/1.1 200 OK"
+2025-06-09 17:40:36,151 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7966992541:AAEEnwqPtw9u7Fz-Z3pgE0WaMm89cW_ZsPM/getUpdates "HTTP/1.1 200 OK"
+2025-06-09 17:40:46,267 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7966992541:AAEEnwqPtw9u7Fz-Z3pgE0WaMm89cW_ZsPM/getUpdates "HTTP/1.1 200 OK"
+2025-06-09 17:40:56,372 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7966992541:AAEEnwqPtw9u7Fz-Z3pgE0WaMm89cW_ZsPM/getUpdates "HTTP/1.1 200 OK"
+2025-06-09 17:41:06,478 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7966992541:AAEEnwqPtw9u7Fz-Z3pgE0WaMm89cW_ZsPM/getUpdates "HTTP/1.1 200 OK"
+2025-06-09 17:41:16,581 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7966992541:AAEEnwqPtw9u7Fz-Z3pgE0WaMm89cW_ZsPM/getUpdates "HTTP/1.1 200 OK"
+2025-06-09 17:41:26,684 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7966992541:AAEEnwqPtw9u7Fz-Z3pgE0WaMm89cW_ZsPM/getUpdates "HTTP/1.1 200 OK"
+2025-06-09 17:41:36,794 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7966992541:AAEEnwqPtw9u7Fz-Z3pgE0WaMm89cW_ZsPM/getUpdates "HTTP/1.1 200 OK"
+2025-06-09 17:41:46,900 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7966992541:AAEEnwqPtw9u7Fz-Z3pgE0WaMm89cW_ZsPM/getUpdates "HTTP/1.1 200 OK"
+2025-06-09 17:41:57,007 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7966992541:AAEEnwqPtw9u7Fz-Z3pgE0WaMm89cW_ZsPM/getUpdates "HTTP/1.1 200 OK"
+2025-06-09 17:42:07,110 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7966992541:AAEEnwqPtw9u7Fz-Z3pgE0WaMm89cW_ZsPM/getUpdates "HTTP/1.1 200 OK"
+2025-06-09 17:42:17,217 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7966992541:AAEEnwqPtw9u7Fz-Z3pgE0WaMm89cW_ZsPM/getUpdates "HTTP/1.1 200 OK"
+2025-06-09 17:42:27,321 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7966992541:AAEEnwqPtw9u7Fz-Z3pgE0WaMm89cW_ZsPM/getUpdates "HTTP/1.1 200 OK"
+2025-06-09 17:42:37,428 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7966992541:AAEEnwqPtw9u7Fz-Z3pgE0WaMm89cW_ZsPM/getUpdates "HTTP/1.1 200 OK"
+2025-06-09 17:42:47,533 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7966992541:AAEEnwqPtw9u7Fz-Z3pgE0WaMm89cW_ZsPM/getUpdates "HTTP/1.1 200 OK"
+2025-06-09 17:42:57,638 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7966992541:AAEEnwqPtw9u7Fz-Z3pgE0WaMm89cW_ZsPM/getUpdates "HTTP/1.1 200 OK"
+2025-06-09 17:43:07,758 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7966992541:AAEEnwqPtw9u7Fz-Z3pgE0WaMm89cW_ZsPM/getUpdates "HTTP/1.1 200 OK"
+2025-06-09 17:43:17,862 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7966992541:AAEEnwqPtw9u7Fz-Z3pgE0WaMm89cW_ZsPM/getUpdates "HTTP/1.1 200 OK"
+2025-06-09 17:43:27,967 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7966992541:AAEEnwqPtw9u7Fz-Z3pgE0WaMm89cW_ZsPM/getUpdates "HTTP/1.1 200 OK"
+2025-06-09 17:43:38,073 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7966992541:AAEEnwqPtw9u7Fz-Z3pgE0WaMm89cW_ZsPM/getUpdates "HTTP/1.1 200 OK"
+2025-06-09 17:43:48,185 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7966992541:AAEEnwqPtw9u7Fz-Z3pgE0WaMm89cW_ZsPM/getUpdates "HTTP/1.1 200 OK"
+2025-06-09 17:43:58,289 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7966992541:AAEEnwqPtw9u7Fz-Z3pgE0WaMm89cW_ZsPM/getUpdates "HTTP/1.1 200 OK"
+2025-06-09 17:44:08,392 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7966992541:AAEEnwqPtw9u7Fz-Z3pgE0WaMm89cW_ZsPM/getUpdates "HTTP/1.1 200 OK"
+2025-06-09 17:44:18,495 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7966992541:AAEEnwqPtw9u7Fz-Z3pgE0WaMm89cW_ZsPM/getUpdates "HTTP/1.1 200 OK"
+2025-06-09 17:44:28,600 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7966992541:AAEEnwqPtw9u7Fz-Z3pgE0WaMm89cW_ZsPM/getUpdates "HTTP/1.1 200 OK"
+2025-06-09 17:44:38,714 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7966992541:AAEEnwqPtw9u7Fz-Z3pgE0WaMm89cW_ZsPM/getUpdates "HTTP/1.1 200 OK"
+2025-06-09 17:44:48,817 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7966992541:AAEEnwqPtw9u7Fz-Z3pgE0WaMm89cW_ZsPM/getUpdates "HTTP/1.1 200 OK"
+2025-06-09 17:44:58,921 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7966992541:AAEEnwqPtw9u7Fz-Z3pgE0WaMm89cW_ZsPM/getUpdates "HTTP/1.1 200 OK"
+2025-06-09 17:45:09,024 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7966992541:AAEEnwqPtw9u7Fz-Z3pgE0WaMm89cW_ZsPM/getUpdates "HTTP/1.1 200 OK"
+2025-06-09 17:45:19,141 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7966992541:AAEEnwqPtw9u7Fz-Z3pgE0WaMm89cW_ZsPM/getUpdates "HTTP/1.1 200 OK"
+2025-06-09 17:45:29,246 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7966992541:AAEEnwqPtw9u7Fz-Z3pgE0WaMm89cW_ZsPM/getUpdates "HTTP/1.1 200 OK"
+2025-06-09 17:45:34,021 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7966992541:AAEEnwqPtw9u7Fz-Z3pgE0WaMm89cW_ZsPM/getUpdates "HTTP/1.1 200 OK"
+2025-06-09 17:45:34,023 - telegram.ext.Application - INFO - Application is stopping. This might take a moment.
+2025-06-09 17:45:34,024 - telegram.ext.Application - INFO - Application.stop() complete
